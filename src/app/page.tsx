@@ -10,7 +10,7 @@ export default function Home() {
   const { session, status } = useContext(sessionContext);
 
   useEffect(() => {
-    if (status === "authenticated") {      
+    if (status === "authenticated") {
       router.replace(`/user/${session?.user?.name}`);
       return;
     }
